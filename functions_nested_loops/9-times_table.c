@@ -16,6 +16,7 @@ void times_table(void)
 		{
 			if ((num * mul) > 9)
 			{
+				_putchar(' ');
 				_putchar(((num * mul) / 10) + '0');
 				_putchar(((num * mul) % 10) + '0');
 				if (mul < 9)
@@ -23,12 +24,15 @@ void times_table(void)
 			}
 			else if ((num * mul) < 10)
 			{
+				if(mul != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar((num * mul) + '0');
 				if (mul < 9)
 					_putchar(',');
-				_putchar(' ');
 			}
-			_putchar(' ');
 			mul++;
 		}
 		num++;
