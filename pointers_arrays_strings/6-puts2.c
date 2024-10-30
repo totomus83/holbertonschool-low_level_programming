@@ -1,6 +1,9 @@
 #include "main.h"
 
-
+/**
+ * puts2 - print 1 character out of 2
+ *@str: string
+ */
 void puts2(char *str)
 {
 	int lengths;
