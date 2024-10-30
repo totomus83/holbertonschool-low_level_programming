@@ -23,5 +23,4 @@ void rev_string(char *s)
 		s[last - 1 - first] = temp;
 		first++;
 	}
-	_putchar('\n');
 }
