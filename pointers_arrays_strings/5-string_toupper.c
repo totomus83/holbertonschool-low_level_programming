@@ -1,8 +1,4 @@
-5)
-
-
-
-#include "holberton.h"
+#include "main.h"
 
 /**
  * string_toupper - Write a function that changes all lowercase letters
@@ -16,10 +12,6 @@ char *string_toupper(char *hi)
 
 	int i = 0;
 
-	int d = 'a' - 'A';
-
-
-
 	while (hi[i] != '\0')
 
 	{
@@ -27,8 +19,7 @@ char *string_toupper(char *hi)
 		if (hi[i] >= 'a' && hi[i] <= 'z')
 
 		{
-
-			hi[i = hi[i] - d;
+			hi[i] = hi[i] - 32;
 
 		}
 		i++;
