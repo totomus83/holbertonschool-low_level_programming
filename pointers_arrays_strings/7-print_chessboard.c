@@ -1,6 +1,9 @@
 #include "main.h"
 
-
+/**
+ * print_chessboard - function to print a chessboard
+ * @a: variable used as array
+ */
 
 void print_chessboard(char (*a)[8])
 {
