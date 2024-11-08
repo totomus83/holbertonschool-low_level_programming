@@ -14,7 +14,10 @@ int main(int argc, char **argv)
 	while (i < argc)
 	{
 		printf("%s", argv[i]);
+		if (i < argc - 1)
+			putchar(' ');
 		i++;
 	}
+	printf("\n");
 	return (0);
 }
