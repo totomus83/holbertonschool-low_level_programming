@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * is_prime_number - initiate the checker
  * _checker -  checks if number is prime
- * @n: number to test
- * @i: tester
- * Return: 1 if prime 0 if else
+ * @i: divider
+ * @n: number to check
+ * Return: return either 0, 1 or recursion happen to continue checking
  */
 int _checker(int i, int n)
 {
@@ -14,6 +13,11 @@ int _checker(int i, int n)
 		return (0);
 	return (_checker(i + 1, n));
 }
+/**
+ * is_prime_number - initiate the checker
+ * @n: number to test
+ * Return: 1 if prime 0 if else
+ */
 int is_prime_number(int n)
 {
 	if (n <= 1)
