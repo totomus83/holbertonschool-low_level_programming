@@ -19,5 +19,6 @@ int main(int argc, char **argv)
 			putchar('\n');
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
