@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * string_nconcat - concaconate 2 string
@@ -19,12 +18,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	i = 0;
 	j = 0;
+	len = 0;
 	empt = "";
 	if (s1 == NULL)
 		s1 = empt;
 	if (s2 == NULL)
 		s2 = empt;
-	len = strlen(s1);
+	while (s1[len])
+	{
+		len++;
+	}
 	size = (len + n) * sizeof(char);
 	nstr = malloc(size + 1);
 	if (nstr == NULL)
@@ -34,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		nstr[i] = s1[i];
 		i++;
 	}
-	while (j <= n)
+	while (j < n)
 	{
 		nstr[i] = s2[j];
 		i++;
