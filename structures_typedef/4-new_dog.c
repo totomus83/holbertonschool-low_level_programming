@@ -10,17 +10,6 @@
  * Return: newdog struct
  */
 
-#include "dog.h"
-#include <stdlib.h>
-
-/**
- * new_dog - create a new dog construct
- * @name: name of the new dog
- * @age: age of the enw dog
- * @owner: name of the owner
- * Return: return the new dog construct
- */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int n, o, i;
