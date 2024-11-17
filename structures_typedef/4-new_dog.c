@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 /**
- *
  * new_dog - creates a new dog
  * @name: dog name
  * @age: dog age
@@ -26,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	newdog->name = malloc((n + 1) * sizeof(char));
 	newdog->owner = malloc((o + 1) * sizeof(char));
-	if (newdog->name == NULL|| newdog->owner == NULL)
+	if (newdog->name == NULL || newdog->owner == NULL)
 	{
 		free(newdog->name);
 		free(newdog->owner);
