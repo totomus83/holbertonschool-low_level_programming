@@ -2,6 +2,18 @@
 #include <stdlib.h>
 
 /**
+ *
+ * new_dog - creates a new dog
+ * @name: dog name
+ * @age: dog age
+ * @owner: dog owner name
+ * Return: newdog struct
+ */
+
+#include "dog.h"
+#include <stdlib.h>
+
+/**
  * new_dog - create a new dog construct
  * @name: name of the new dog
  * @age: age of the enw dog
@@ -14,7 +26,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int n, o, i;
 	dog_t *newdog;
 
-		n = 0;
+	n = 0;
 	o = 0;
 	while (name[n] != '\0')
 		n++;
@@ -24,13 +36,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newdog == NULL)
 		return (NULL);
 	newdog->name = malloc((n + 1) * sizeof(char));
-		if (newdog->name == NULL|| newdog->owner == NULL)
-		{
-			free(newdog->name);
-			free(newdog->owner);
-			free(newdog);
-			return (NULL);
-		}
+	newdog->owner = malloc((o + 1) * sizeof(char));
+	if (newdog->name == NULL|| newdog->owner == NULL)
+	{
+		free(newdog->name);
+		free(newdog->owner);
+		free(newdog);
+		return (NULL);
+	}
 	i = 0;
 	while (i < n)
 	{
@@ -39,7 +52,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	newdog->name[n] = '\0';
 	newdog->age = age;
-	newdog->owner = malloc((o + 1) * sizeof(char));
 	i = 0;
 	while (i < o)
 	{
