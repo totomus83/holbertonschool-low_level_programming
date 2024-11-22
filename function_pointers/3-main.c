@@ -8,34 +8,24 @@
  * @argv: array of arguments
  * Return: 0 if success
  */
-
 int main(int argc, char *argv[])
 {
-	int a, b, cal;
-	int (*operation)(int, int);
-	char *get_op;
+	int (*oprt)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	get_op = argv[2];
 
-	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
+	oprt = get_op_func(argv[2]);
+
+	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	operation = get_op_func(get_op);
-	cal = operation(a, b);
-	printf("%d\n", cal);
+
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
