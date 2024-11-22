@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
 
 /**
  * sum_them_all - sums all the integers of an array
@@ -22,7 +23,6 @@ int sum_them_all(const unsigned int n, ...)
 			result += va_arg(valist, int);
 		}
 		va_end(valist);
-
 		return (result);
 	}
 	return (0);
