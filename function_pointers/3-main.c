@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - checks the arguments
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0 if success
+ */
+
 int main(int argc, char *argv[])
 {
 	int a, b, cal;
@@ -17,7 +24,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	get_op = argv[2];
 
-	if(get_op_func(argv[2]) == NULL)
+	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -28,7 +35,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	operation = get_op_func(get_op);
-	cal = operation (a, b);
+	cal = operation(a, b);
 	printf("%d\n", cal);
 	return (0);
 }
