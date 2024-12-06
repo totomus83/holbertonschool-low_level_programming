@@ -8,9 +8,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t length;
+	size_t l;
 
-	length = 0;
+	l = 0;
 
 	while (h != NULL)
 	{
@@ -18,8 +18,8 @@ size_t print_list(const list_t *h)
 			printf("[0] %s\n", "(nil)\n");
 		else
 			printf("[%u] %s\n", h->len, h->str);
-		length++;
+		l++;
 		h = h->next;
 	}
-	return (length);
+	return (l);
 }
